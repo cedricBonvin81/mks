@@ -1,14 +1,13 @@
 <script setup lang="ts">
-// Liste des questions/réponses
 const faqs = ref([
   {
     question: "À quel âge peut-on commencer l'escalade ?",
     answer: "Chez Monkey-School, nous accueillons les enfants dès 3 ans. Les groupes sont divisés par âge et par niveau pour que chaque petit singe progresse en toute sécurité avec des exercices adaptés.",
-    isOpen: true // La première est ouverte par défaut
+    isOpen: true
   },
   {
     question: "Faut-il avoir son propre matériel ?",
-    answer: "Pas du tout ! Pour touts les cours que se soit en collectif ou en privée, nous fournissons tout le matériel nécessaire (Chaussures, baudriers, cordes, systèmes d'assurage). Si tu as ton propre matériel n'hésite pas à l'apporter. C'est toujours mieux de grimper avec son propre matériel.",
+    answer: "Pas du tout ! Pour tous les cours, que ce soit en collectif ou en privé, nous fournissons tout le matériel nécessaire (chaussures, baudriers, cordes, systèmes d'assurage). Si tu as ton propre matériel, n'hésite pas à l'apporter. C'est toujours mieux de grimper avec son propre matériel.",
     isOpen: false
   },
   {
@@ -33,23 +32,25 @@ const faqs = ref([
   },
   {
     question: "Les parents peuvent-ils rester regarder ?",
-    answer: "Pendant les cours enfants, les parents peuvent s'installer confortablement à l'espace café du centre sportif jsute  en face de la salle d'escalade. C'est l'endroit idéal pour observer les progrès de loin !",
+    answer: "Pendant les cours enfants, les parents peuvent s'installer confortablement à l'espace café du centre sportif juste en face de la salle d'escalade. C'est l'endroit idéal pour observer les progrès de loin !",
     isOpen: false
   }
 ])
 
-// Fonction pour ouvrir/fermer une question
 const toggleFaq = (index: number) => {
   faqs.value.forEach((item, idx) => {
     if (idx === index) {
-      // On inverse l'état de la question cliquée
       item.isOpen = !item.isOpen
     } else {
-      // On ferme toutes les autres
       item.isOpen = false
     }
   })
 }
+
+useSiteSeo({
+  title: 'FAQ',
+  description: 'Questions fréquentes sur les cours d\'escalade Monkey School à Crans-Montana : âge, matériel, tarifs, lieu, cours d\'essai et paiement.',
+})
 </script>
 
 <template>
@@ -75,6 +76,8 @@ const toggleFaq = (index: number) => {
         >
           <button 
             @click="toggleFaq(index)"
+            :aria-expanded="item.isOpen"
+            :aria-controls="`faq-answer-${index}`"
             class="flex w-full items-center justify-between p-2 text-left sm:p-8"
           >
             <span class="text-lg font-bold text-ink sm:text-xl">
@@ -90,6 +93,8 @@ const toggleFaq = (index: number) => {
 
           <div 
             v-show="item.isOpen"
+            :id="`faq-answer-${index}`"
+            role="region"
             class="px-6 pb-6 sm:px-8 sm:pb-6"
           >
             <div class="h-px w-full bg-slate-100 mb-4"></div>
@@ -129,16 +134,3 @@ const toggleFaq = (index: number) => {
     </div>
   </div>
 </template>
-
-<style scoped>
-/* Animation simple pour l'ouverture (optionnel car v-show est déjà efficace) */
-.v-enter-active,
-.v-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
-}
-</style>

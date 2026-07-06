@@ -2,12 +2,23 @@
 const route = useRoute()
 const { getCoursById } = useCours()
 
-// Récupération automatique du cours par rapport à l'URL (ex: /cours/mini-spider)
 const cours = computed(() => getCoursById(String(route.params.id)))
 
-// Mise à jour automatique du titre du navigateur
-useHead({
-  title: cours.value ? `${cours.value.nom} - Monkey School` : 'Cours introuvable'
+const seoTitle = computed(() =>
+  cours.value ? `${cours.value.nom} - Monkey School` : 'Cours introuvable'
+)
+
+const seoDescription = computed(() =>
+  cours.value?.description ?? 'Ce cours n\'existe pas ou a été déplacé.'
+)
+
+const seoImage = computed(() => cours.value?.image ?? '/images/hero.jpg')
+
+useSiteSeo({
+  title: seoTitle,
+  description: seoDescription,
+  image: seoImage,
+  noIndex: computed(() => !cours.value),
 })
 </script>
 
@@ -171,7 +182,7 @@ useHead({
                   <div>
                     <h4 class="font-black text-ink uppercase italic text-sm">Réservation sur-mesure</h4>
                     <p class="text-xs text-ink-muted font-medium mt-1 leading-relaxed">
-                      Afin de bloquer une date et un horais qui s'adaptent à vos disponibilités, contactez-nous directement par téléphone ou via notre formulaire. Nous calerons votre session ensemble !
+                      Afin de bloquer une date et des horaires qui s'adaptent à vos disponibilités, contactez-nous directement par téléphone ou via notre formulaire. Nous calerons votre session ensemble !
                     </p>
                   </div>
                </div>
@@ -238,5 +249,18 @@ useHead({
       </div>
     </div>
 
+  </div>
+
+  <div v-else class="w-full bg-surface py-20">
+    <div class="container-page max-w-lg text-center space-y-6">
+      <span class="text-6xl font-black text-brand italic">404</span>
+      <h1 class="text-2xl font-black text-ink uppercase tracking-tight">Cours introuvable</h1>
+      <p class="text-sm text-ink-muted font-medium">
+        Le cours que tu cherches n'existe pas ou a été déplacé.
+      </p>
+      <UiBaseButton to="/cours" color="brand" size="lg" icon="heroicons:arrow-left">
+        Retour aux cours
+      </UiBaseButton>
+    </div>
   </div>
 </template>

@@ -1,9 +1,11 @@
 <script setup lang="ts">
-// On récupère les listes centralisées depuis le composable
 const { coursCollectifs, coursPrives } = useCours()
-
-// Gestion de l'onglet actif
 const activeTab = ref('collectifs')
+
+useSiteSeo({
+  title: 'Les cours',
+  description: 'Cours d\'escalade collectifs et privés à Crans-Montana : Micro-Spider (3-5 ans), Mini-Spider, Gecko, Monkey, Super-Monkey, séances privées et cours en famille.',
+})
 </script>
 
 <template>

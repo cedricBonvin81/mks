@@ -1,17 +1,10 @@
 <script setup lang="ts">
-// On récupère juste les données pour compter ou lier proprement
-const { coursCollectifs, coursPrives } = useCours()
-
-// L'URL de l'image qui fonctionne nickel chez toi
 const imageUrl = "/images/hero.jpg"
 
-// ==========================================
-// 📢 TON BLOC FLASH INFOS / NEWS
-// ==========================================
-
-
-useHead({
-  title: 'Monkey School - École d’Escalade à Crans-Montana'
+useSiteSeo({
+  title: 'Monkey School - École d\'escalade à Crans-Montana',
+  description: 'Cours d\'escalade à Crans-Montana pour tous les âges, dès 3 ans. Cours collectifs, privés et en famille au Crans-Montana Sports Center. Matériel inclus.',
+  image: imageUrl,
 })
 </script>
 
@@ -116,7 +109,7 @@ useHead({
           <div class="flex items-center gap-3 border-t md:border-t-0 md:border-l border-slate-200/60 pt-4 md:pt-0 md:pl-6">
             <Icon name="heroicons:exclamation-triangle" class="size-5 text-red-500 shrink-0" />
             <p class="text-xs sm:text-sm font-bold text-ink uppercase tracking-tight italic">
-              <strong class="font-black text-red-500">⚠️ ATTENTION : Fermeture de tout le centre sportif</strong> <span class="italic underline"> du 6 janv. au 21 fév. </span> (indépendamment de notre volonté).
+              <strong class="font-black text-red-500">⚠️ ATTENTION : Fermeture de tout le centre sportif</strong> <span class="italic underline"> du 6 janv. au 21 fév. 2027 </span> (indépendamment de notre volonté).
             </p>
           </div>
 
@@ -185,10 +178,14 @@ useHead({
         
         <div class="h-64 md:h-80 rounded-2xl overflow-hidden shadow-md">
           <NuxtImg 
-            src="/images/main.jpg" 
-            alt="des mains en rond qui font le signe d'un rond en se touchant le poing" 
+            src="/images/friend.jpg" 
+            alt="2 grimpeuses qui se font un check de la main" 
             format="webp"
             class="w-full h-full object-cover" 
+            width="800"
+            height="450"
+            sizes="sm:100vw md:800px"
+            quality="60"
           />
         </div>
       </div>

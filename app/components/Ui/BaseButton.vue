@@ -68,11 +68,13 @@ const variantClasses = {
     primary: 'bg-primary text-white hover:bg-primary-hover focus:ring-primary',
     brand: 'bg-brand text-white hover:bg-brand/90 focus:ring-brand',
     ink: 'bg-ink text-white hover:bg-ink-muted focus:ring-ink',
+    white: 'bg-white/10 text-white hover:bg-white/20 border border-white/10 focus:ring-white',
   },
   outline: {
     primary: 'border-2 border-primary text-primary hover:bg-primary/5 focus:ring-primary',
     brand: 'border-2 border-brand text-brand hover:bg-brand/5 focus:ring-brand',
     ink: 'border-2 border-ink text-ink hover:bg-ink/5 focus:ring-ink',
+    white: 'border-2 border-white/30 text-white hover:bg-white/10 focus:ring-white',
   },
 }
 

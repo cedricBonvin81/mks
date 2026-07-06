@@ -8,7 +8,6 @@
   }
 
   body {
-    /* Fond blanc, texte foncé 'ink', police Plus Jakarta Sans */
     @apply bg-surface font-sans text-ink antialiased;
     @apply leading-body tracking-body;
   }

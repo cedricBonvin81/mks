@@ -9,7 +9,7 @@
             <div class="flex size-9 items-center justify-center rounded-xl bg-brand text-white">
                 <Icon name="heroicons:trophy" class="size-5" /> 
             </div>
-            <span class="text-lg font-bold tracking-tight text-text">
+            <span class="text-lg font-bold tracking-tight text-ink">
               Monkey<span class="text-brand">- School</span>
             </span>
           </div>

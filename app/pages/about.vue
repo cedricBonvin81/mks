@@ -1,10 +1,18 @@
+<script setup lang="ts">
+useSiteSeo({
+  title: 'À propos',
+  description: 'Découvre l\'histoire de Monkey School à Crans-Montana : une école d\'escalade passionnée depuis 2017, plus de 60 grimpeurs par semaine au CMSC.',
+  image: '/images/degaine.jpg',
+})
+</script>
+
 <template>
     <div>
         <section class="relative h-[450px] w-full bg-slate-950 sm:h-[550px] overflow-hidden">
         <NuxtImg 
           src="/images/degaine.jpg" 
           alt="Une corde qui passe dans les dégaines sur un rocher" 
-          class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-102"
+          class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
           loading="eager"
           format="webp"
         />
@@ -21,7 +29,7 @@
             </h1>
             
             <p class="mt-4 max-w-xl text-base sm:text-lg text-slate-200 leading-relaxed">
-                Une décennie de passion, de grimpe et de partage au cœur du Valais.
+                Près de dix ans de passion, de grimpe et de partage au cœur du Valais.
             </p>
         </div>
       </section>
@@ -44,7 +52,7 @@
                 </p>
   
               <p class="text-base leading-relaxed text-ink-muted">
-                Pour offrir les meilleures conditions de grimpe à nos élèves, nous dispensons l'ensemble de nos cours collectifs et individuels au sein du magnifique <a href="https://www.crans-montana.ch/fr/cmsc" target="_blank" rel="noopener noreferrer" class="font-bold text-ink underline hover:text-brand transition-colors">centre sportif "Crans-Montana Sports Center"</a>. Entre son immense mur de cordes de 500 m² culminant à 13,5 mètres et sa zone de bloc de 150 m², nos élèves évoluent sur l'un des plus beaux murs d'escalade du valais central.
+                Pour offrir les meilleures conditions de grimpe à nos élèves, nous dispensons l'ensemble de nos cours collectifs et individuels au sein du magnifique <a href="https://www.crans-montana.ch/fr/cmsc" target="_blank" rel="noopener noreferrer" class="font-bold text-ink underline hover:text-brand transition-colors">centre sportif "Crans-Montana Sports Center"</a>. Entre son immense mur de cordes de 500 m² culminant à 13,5 mètres et sa zone de bloc de 150 m², nos élèves évoluent sur l'un des plus beaux murs d'escalade du Valais central.
               </p>
             </div>
   

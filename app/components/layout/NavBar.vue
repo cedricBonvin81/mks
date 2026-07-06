@@ -30,7 +30,7 @@ const closeMenu = () => {
             loading="eager"
           /> 
         </div>
-        <span class="text-xl font-bold tracking-tight text-text">
+        <span class="text-xl font-bold tracking-tight text-ink">
           Monkey<span class="text-brand">- School</span>
         </span>
       </NuxtLink>
@@ -40,7 +40,7 @@ const closeMenu = () => {
           v-for="link in navLinks" 
           :key="link.to" 
           :to="link.to"
-          class="text-sm font-medium text-text-muted transition-colors hover:text-brand"
+          class="text-sm font-medium text-ink-muted transition-colors hover:text-brand"
         >
           {{ link.name }}
         </NuxtLink>
@@ -53,7 +53,10 @@ const closeMenu = () => {
       <div class="flex md:hidden">
         <button 
           type="button" 
-          class="text-text-muted hover:text-brand"
+          class="text-ink-muted hover:text-brand"
+          :aria-expanded="isMobileMenuOpen"
+          aria-controls="mobile-menu"
+          aria-label="Ouvrir le menu de navigation"
           @click="isMobileMenuOpen = !isMobileMenuOpen"
         >
           <Icon :name="isMobileMenuOpen ? 'heroicons:x-mark' : 'heroicons:bars-3'" class="size-8" />
@@ -63,6 +66,7 @@ const closeMenu = () => {
 
     <div 
       v-if="isMobileMenuOpen" 
+      id="mobile-menu"
       class="border-b border-surface-muted bg-surface md:hidden"
     >
       <div class="space-y-1 px-4 pb-6 pt-2">
@@ -70,7 +74,7 @@ const closeMenu = () => {
           v-for="link in navLinks"
           :key="link.to"
           :to="link.to"
-          class="block rounded-lg px-3 py-4 text-base font-medium text-text-muted hover:bg-surface-muted hover:text-brand"
+          class="block rounded-lg px-3 py-4 text-base font-medium text-ink-muted hover:bg-surface-muted hover:text-brand"
           @click="closeMenu"
         >
           {{ link.name }}
@@ -87,7 +91,7 @@ const closeMenu = () => {
 
 <style scoped>
 /* Applique la couleur orange uniquement aux liens simples de la nav, pas au bouton */
-a.text-text-muted.router-link-active {
+a.text-ink-muted.router-link-active {
   @apply text-brand;
 }
 </style>

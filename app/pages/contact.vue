@@ -1,3 +1,10 @@
+<script setup lang="ts">
+useSiteSeo({
+  title: 'Contact',
+  description: 'Contacte Monkey School à Crans-Montana : cours d\'escalade, inscriptions, séances privées. Par e-mail, téléphone ou WhatsApp au +41 79 519 04 84.',
+})
+</script>
+
 <template>
     <div class="w-full bg-surface py-12 sm:py-20">
       <div class="container-page">
