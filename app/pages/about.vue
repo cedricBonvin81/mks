@@ -3,7 +3,7 @@
         <section class="relative h-[450px] w-full bg-slate-950 sm:h-[550px] overflow-hidden">
         <NuxtImg 
           src="/images/degaine.jpg" 
-          alt="Grande bannière escalade Monkey School" 
+          alt="Une corde qui passe dans les dégaines sur un rocher" 
           class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-102"
           loading="eager"
           format="webp"
@@ -120,7 +120,7 @@
             <div class="hidden h-64 overflow-hidden rounded-2xl bg-slate-100 shadow-sm sm:block">
               <NuxtImg 
                 src="/images/about_2.jpg" 
-                alt="Matériel d'escalade et cordes" 
+                alt="grimpeur dans une salle d'escalade qui grimpe sur un bloc entre les volumes" 
                 class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                 loading="lazy"
                 sizes="md:33vw"
@@ -131,7 +131,7 @@
             <div class="hidden h-64 overflow-hidden rounded-2xl bg-slate-100 shadow-sm sm:block">
               <NuxtImg 
                 src="/images/about_3.jpg" 
-                alt="Vue du mur de bloc" 
+                alt="Vue d'une femme en gros plan qui grimpe sur un bloc" 
                 class="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                 loading="lazy"
                 sizes="md:33vw"

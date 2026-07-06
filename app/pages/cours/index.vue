@@ -47,7 +47,9 @@ const activeTab = ref('collectifs')
             class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" 
             loading="lazy" 
             width="400"
-          height="420"
+            height="420"
+            quality="60"
+            
           />
           <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent opacity-95"></div>
 

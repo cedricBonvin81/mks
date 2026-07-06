@@ -42,9 +42,9 @@ export interface CoursDateSaison {
         lieu: "Salle d'escalade de la Moubra",
         jour: "Lundi",
         horaire: "17h30 - 19h00",
-        nbCours: "30",
+        nbCours: "25",
         duree: "1h30",
-        prix: "840.-",
+        prix: "700.-",
         description: "Ce cours est ludique et axé sur des jeux, le développement de l'équilibre, de la coordination et de la souplesse. Idéal pour faire ses premiers pas sur les prises en toute confiance.",
         avantages: [
            "Accès libre et gratuit à la salle toute l'année (même en dehors des cours)",
@@ -70,8 +70,8 @@ export interface CoursDateSaison {
               { nom: "Février", jours: "22" },
               { nom: "Mars", jours: "01 - 08 - 15 - 22" },
               { nom: "Avril", jours: "05 - 12 - 19 - 26" },
-              { nom: "Mai", jours: "03 - 10 - 24 - 31" },
-              { nom: "Juin", jours: "07 - 14 - 21" },
+              { nom: "Mai", jours: "03 - 10" },
+            
             ]
           }
         ]
@@ -86,11 +86,16 @@ export interface CoursDateSaison {
         lieu: "Salle d'escalade de la Moubra",
         jour: "Lundi",
         horaire: "17h30 - 19h00",
-        nbCours: "30",
+        nbCours: "25",
         duree: "1h30",
-        prix: "840.-",
+        prix: "700.-",
         description: "Ce cours est ludique et axé sur des jeux, le développement de l'équilibre, coordination, souplesse. Nous verrons les premières manipulations de corde (noeud, assurage etc..) !",
-        avantages: ["Accès à la salle gratuit durant toute l'année"],
+        avantages: [
+          "Accès libre et gratuit à la salle toute l'année (même en dehors des cours)",
+           "Matériel technique complet fourni (Chaussures, harnais, etc...)",
+           "Encadrement par des entraîneurs certifiés et passionnés",
+           "Rabais familial disponible",
+         ],
         rabais: rabaisFamilleStandard,
         planningSaison: [
             {
@@ -109,8 +114,8 @@ export interface CoursDateSaison {
                   { nom: "Février", jours: "22" },
                   { nom: "Mars", jours: "01 - 08 - 15 - 22" },
                   { nom: "Avril", jours: "05 - 12 - 19 - 26" },
-                  { nom: "Mai", jours: "03 - 10 - 24 - 31" },
-                  { nom: "Juin", jours: "07 - 14 - 21" },
+                  { nom: "Mai", jours: "03 - 10" },
+                
                 ]
             }
         ]
@@ -125,11 +130,16 @@ export interface CoursDateSaison {
         lieu: "Salle d'escalade de la Moubra",
         jour: "Mardi",
         horaire: "17h30 - 19h00",
-        nbCours: "30",
+        nbCours: "25",
         duree: "1h30",
-        prix: "840.-",
+        prix: "700.-",
         description: "Approfondissement des techniques de grimpe, autonomie complète sur l'assurage, lecture des voies et escalade en tête pour les plus téméraires.",
-        avantages: ["Accès à la salle gratuit durant toute l'année"],
+        avantages: [
+          "Accès libre et gratuit à la salle toute l'année (même en dehors des cours)",
+           "Matériel technique complet fourni (Chaussures, harnais, etc...)",
+           "Encadrement par des entraîneurs certifiés et passionnés",
+           "Rabais familial disponible",
+         ],
         rabais: rabaisFamilleStandard,
         planningSaison: [
             {
@@ -142,14 +152,13 @@ export interface CoursDateSaison {
                 ]
               },
               {
-                annee: "2027", // 15 cours
+                annee: "2027", // 10 cours
                 mois: [
                   { nom: "Janvier", jours: "Centre Sportif fermé" },
                   { nom: "Février", jours: "23" },
                   { nom: "Mars", jours: "02 - 09 - 16 - 23" },
                   { nom: "Avril", jours: "06 - 13 - 20 - 27" },
-                  { nom: "Mai", jours: "04 - 11 - 18 - 25" },
-                  { nom: "Juin", jours: "01 - 08" },
+                  { nom: "Mai", jours: "04" }, 
                 ]
               }
         ]
@@ -164,17 +173,22 @@ export interface CoursDateSaison {
         lieu: "Salle d'escalade de la Moubra",
         jour: "Jeudi",
         horaire: "18h00 - 19h30",
-        nbCours: "30",
+        nbCours: "25",
         duree: "1h30",
-        prix: "840.-",
+        prix: "700.-",
         description: "Perfectionnement technique et physique, entraînement orienté bloc et voies, gestion du mental dans les projets plus complexes.",
-        avantages: ["Accès à la salle gratuit durant toute l'année"],
+        avantages: [
+          "Accès libre et gratuit à la salle toute l'année (même en dehors des cours)",
+           "Matériel technique complet fourni (Chaussures, harnais, etc...)",
+           "Encadrement par des entraîneurs certifiés et passionnés",
+           "Rabais familial disponible",
+         ],
         rabais: rabaisFamilleStandard,
         planningSaison: [
             {
                 annee: "2026", // 15 cours
                 mois: [
-                  { nom: "Août", jours: "27" },
+                  
                   { nom: "Septembre", jours: "03 - 10 - 17 - 24" },
                   { nom: "Octobre", jours: "01 - 08 - 29" },
                   { nom: "Novembre", jours: "05 - 12 - 19 - 26" },
@@ -189,7 +203,7 @@ export interface CoursDateSaison {
                   { nom: "Mars", jours: "04 - 11 - 18 - 25" },
                   { nom: "Avril", jours: "08 - 15 - 22 - 29" },
                   { nom: "Mai", jours: "13 - 20" },
-                  { nom: "Juin", jours: "03 - 10 - 17 - 24" },
+                  
                 ]
               }
         ]
@@ -204,11 +218,16 @@ export interface CoursDateSaison {
         lieu: "Salle d'escalade de la Moubra",
         jour: "Lundi",
         horaire: "19h30 - 21h00",
-        nbCours: "30",
+        nbCours: "25",
         duree: "1h30",
-        prix: "840.-",
+        prix: "700.-",
         description: "Le groupe pour tous les adultes et grands ados, débutants ou confirmés. Grimpe libre encadrée, conseils personnalisés et ambiance de tribu assurée.",
-        avantages: ["Accès à la salle gratuit durant toute l'année"],
+        avantages: [
+          "Accès libre et gratuit à la salle toute l'année (même en dehors des cours)",
+           "Matériel technique complet fourni (Chaussures, harnais, etc...)",
+           "Encadrement par des entraîneurs certifiés et passionnés",
+           "Rabais familial disponible",
+         ],
         rabais: rabaisFamilleStandard,
         planningSaison: [
             {
@@ -227,8 +246,8 @@ export interface CoursDateSaison {
                   { nom: "Février", jours: "22" },
                   { nom: "Mars", jours: "01 - 08 - 15 - 22" },
                   { nom: "Avril", jours: "05 - 12 - 19 - 26" },
-                  { nom: "Mai", jours: "03 - 10 - 24 - 31" },
-                  { nom: "Juin", jours: "07 - 14 - 21" },
+                  { nom: "Mai", jours: "03 - 10" },
+                
                 ]
               }
         ]

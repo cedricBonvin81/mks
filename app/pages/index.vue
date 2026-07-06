@@ -17,26 +17,31 @@ useHead({
 
 <template>
   <div class="w-full bg-surface min-h-screen pb-20">
-    
-    <section class="relative h-[80vh] bg-slate-950 flex items-center overflow-hidden">
+
+    <!-- HERO -->
+    <section class="relative min-h-[80vh] bg-slate-950 flex items-center overflow-hidden">
       <NuxtImg 
         :src="imageUrl" 
-        alt="Grimpeur en Valais" 
+        alt="Grimpeur sur une falaise avec colonette" 
         loading="eager"
-        format="webp"
-        class="absolute inset-0 w-full h-full object-cover opacity-45 scale-105" 
+        quality="60"
+        class="absolute inset-0 w-full h-full object-cover opacity-45 scale-105"
+        width="1920"
+        preload
       />
       <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-black/20"></div>
 
       <div class="container-page max-w-6xl relative z-10 px-6">
-        <div class="max-w-3xl space-y-6">
+        <div class="max-w-3xl space-y-12 sm:space-y-6">
           <span class="inline-block px-4 py-1.5 text-xs font-black rounded-full bg-brand text-slate-950 uppercase tracking-widest italic shadow-lg">
             Crans-Montana, Valais
           </span>
-          <h1 class="text-5xl sm:text-7xl font-black text-white tracking-tight uppercase italic leading-[0.95]">
-            L'escalade en <span class="text-brand">tribu</span> ou sur-mesure.
+          <h1 class="text-5xl sm:text-7xl font-black text-white tracking-tight uppercase italic leading-[0.85]">
+            L'escalade 
+            <span class="text-2xl sm:text-4xl font-medium lowercase text-white/90 block sm:inline my-1 sm:my-0 sm:mx-2">avec</span> 
+            <span class="text-brand text-[35px]  sm:text-6xl block sm:inline">Monkey-School</span>
           </h1>
-          <p class="text-lg sm:text-xl text-slate-200 font-medium max-w-2xl leading-relaxed">
+          <p class="text-lg sm:text-xl text-slate-200 font-medium max-w-2xl mt-24 leading-relaxed">
             Retrouve le geste primaire, la force pure et la connexion avec la matière. Rejoins la <strong>Monkey-School</strong> pour repousser tes limites en toute confiance.
           </p>
           <div class="pt-4 flex flex-wrap gap-4">
@@ -57,7 +62,8 @@ useHead({
       </div>
     </section>
 
-    <section class="container-page max-w-6xl -mt-12 relative z-20 px-6">
+     <!-- ENCADRE -->
+    <section class="container-page max-w-6xl mt-12 lg:-mt-12 md:-mt-6 relative z-20 px-6">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-xl flex items-center gap-4 group hover:border-brand/30 transition-all">
           <div class="h-12 w-12 rounded-xl bg-brand/10 text-brand flex items-center justify-center shrink-0">
@@ -110,7 +116,7 @@ useHead({
           <div class="flex items-center gap-3 border-t md:border-t-0 md:border-l border-slate-200/60 pt-4 md:pt-0 md:pl-6">
             <Icon name="heroicons:exclamation-triangle" class="size-5 text-red-500 shrink-0" />
             <p class="text-xs sm:text-sm font-bold text-ink uppercase tracking-tight italic">
-              <strong class="font-black text-red-500">⚠️ ATTENTION :</strong> <span class="italic underline">Fermeture du 6 janv. au 21 fév. </span> (indépendamment de notre volonté).
+              <strong class="font-black text-red-500">⚠️ ATTENTION : Fermeture de tout le centre sportif</strong> <span class="italic underline"> du 6 janv. au 21 fév. </span> (indépendamment de notre volonté).
             </p>
           </div>
 
@@ -122,7 +128,6 @@ useHead({
     </section>
 
     <!-- POURQUOI GRIMPPER -->
-
     <div class="w-full bg-slate-100 py-24 border-y border-slate-100">
       
       <section id="bienfaits" class="container-page max-w-6xl mx-auto px-6 space-y-12">
@@ -162,7 +167,6 @@ useHead({
     </div>
 
     <!-- ESPRIT MONKEY SCHOOL -->
-
     <section class="container-page max-w-6xl mt-24 px-6">
       <div class="bg-white border border-slate-100 rounded-[2.5rem] p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
@@ -182,7 +186,7 @@ useHead({
         <div class="h-64 md:h-80 rounded-2xl overflow-hidden shadow-md">
           <NuxtImg 
             src="/images/main.jpg" 
-            alt="Ambiance grimpe" 
+            alt="des mains en rond qui font le signe d'un rond en se touchant le poing" 
             format="webp"
             class="w-full h-full object-cover" 
           />
@@ -191,7 +195,6 @@ useHead({
     </section>
 
     <!-- TROUVE TA FORMULE -->
-
     <div class="w-full bg-slate-50 py-24 border-y border-slate-100 mt-24">
       
       <section class="container-page max-w-6xl mx-auto px-6 space-y-8">
@@ -237,6 +240,7 @@ useHead({
       </section>
     </div>
 
+    <!-- OUTRO -->
     <section class="container-page max-w-6xl mt-24 px-6">
       <div class="bg-slate-900 rounded-[2.5rem] text-white p-8 md:p-16 text-center space-y-8 relative overflow-hidden shadow-xl">
         

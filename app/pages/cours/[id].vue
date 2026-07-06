@@ -15,7 +15,12 @@ useHead({
   <div v-if="cours" class="w-full bg-surface pb-20">
     
     <div class="relative h-[250px] sm:h-[380px] bg-slate-900 overflow-hidden">
-      <img :src="cours.image" :alt="cours.nom" class="w-full h-full object-cover opacity-40 scale-105" />
+      <NuxtImg :src="cours.image" :alt="cours.nom" class="w-full h-full object-cover opacity-40 scale-105" 
+        loading="eager"
+        width="400"
+        height="420"
+        quality="60"
+      />
       <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-black/10"></div>
       
       <div class="absolute inset-x-0 bottom-0 p-6 sm:p-12">
@@ -28,7 +33,12 @@ useHead({
           <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div class="flex items-center gap-5">
               <div class="hidden sm:block shrink-0 h-20 w-20 md:h-24 md:w-24 rounded-[1.5rem] border-4 border-white shadow-2xl overflow-hidden rotate-3">
-                <img :src="cours.image" :alt="cours.nom" class="w-full h-full object-cover" />
+                <NuxtImg :src="cours.image" :alt="cours.nom" class="w-full h-full object-cover" 
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                  quality="60"
+                />
               </div>
 
               <div class="space-y-2">
@@ -49,6 +59,49 @@ useHead({
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <div class="lg:col-span-8 space-y-8">
+
+          <section 
+            v-if="cours.type === 'Régulier'" 
+            class="bg-amber-50/60 border border-amber-200 rounded-[2rem] p-6 sm:p-8 shadow-sm relative overflow-hidden"
+          >
+            <div class="absolute top-0 right-0 bg-amber-500 text-white font-black uppercase text-[10px] tracking-wider px-4 py-1 rounded-bl-xl italic">
+              Saison Exceptionnelle
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500 text-white shadow-md shadow-amber-500/10 shrink-0">
+                <Icon name="heroicons:exclamation-triangle" class="size-5" />
+              </div>
+              <div class="space-y-3">
+                <h3 class="text-lg font-black text-amber-950 uppercase tracking-tight italic">
+                  Ajustement exceptionnel du calendrier
+                </h3>
+                
+                <p class="text-xs sm:text-sm text-amber-900 font-medium leading-relaxed">
+                  En raison de la fermeture technique du <span class="font-bold">Crans-Montana Sports Center</span> du <span class="font-bold">6 janvier au 21 février 2027</span>, le programme de cette saison doit être adapté indépendamment de notre volonté. <br>
+                  Nous nous excusons pour les inconvénients que cela peut causer et nous vous remercions de votre compréhension.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div class="bg-white/80 backdrop-blur-sm border border-amber-200/60 p-4 rounded-xl flex items-center gap-3">
+                    <Icon name="heroicons:academic-cap" class="size-5 text-amber-600 shrink-0" />
+                    <div>
+                      <span class="block text-[11px] font-bold uppercase text-amber-800 tracking-wider">Volume de cours</span>
+                      <span class="text-sm font-black text-amber-950 font-mono">25 sessions <span class="text-xs font-normal text-amber-700">(au lieu de 30)</span></span>
+                    </div>
+                  </div>
+
+                  <div class="bg-white/80 backdrop-blur-sm border border-amber-200/60 p-4 rounded-xl flex items-center gap-3">
+                    <Icon name="heroicons:credit-card" class="size-5 text-amber-600 shrink-0" />
+                    <div>
+                      <span class="block text-[11px] font-bold uppercase text-amber-800 tracking-wider">Tarification</span>
+                      <span class="text-sm font-black text-amber-950 font-mono">Prix adapté au prorata</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
           
           <section class="bg-white rounded-[2rem] p-6 sm:p-8 border border-slate-100 shadow-sm">
             <h3 class="text-xl font-black text-ink uppercase tracking-tight mb-4 italic">L'esprit du cours</h3>

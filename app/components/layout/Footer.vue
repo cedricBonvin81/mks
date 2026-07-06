@@ -39,7 +39,18 @@
           <div class="md:col-span-4 space-y-3">
             <h4 class="text-xs font-bold uppercase tracking-wider text-ink">Partenaire Officiel</h4>
             <div class="rounded-2xl bg-white p-5 border border-slate-100 shadow-sm">
-              <p class="text-xs font-bold text-ink mb-1">Fier partenaire de l'infrastructure</p>
+              <p class="text-xs font-bold text-ink mb-3">Fier partenaire de l'infrastructure</p>
+              
+              <div class="mb-4">
+                <NuxtImg 
+                  src="/images/cmsc_black.png" 
+                  alt="Logo Crans-Montana Sports Center" 
+                  width="300" 
+                  height="72"
+                  class="h-8 w-auto object-contain" 
+                />
+              </div>
+
               <p class="text-xs text-ink-muted leading-relaxed mb-4">
                 Tous nos cours se déroulent au sein du centre 'Crans-Montana Sports Center'.
               </p>
