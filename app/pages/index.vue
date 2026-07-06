@@ -243,12 +243,11 @@ useHead({
         <NuxtImg 
           src="/images/bloc-femme.jpg" 
           alt="Fond grimpeuse qui grimpe sur un bloc" 
-          format="webp"
-          width="400"
-          height="400"
-          sizes="sm:100vw md:50vw lg:400px"
+          width="800"
+          height="450"
+          sizes="sm:100vw md:800px"
           class="absolute inset-0 w-full h-full object-cover opacity-20" 
-          quality="80"
+          quality="60"
         />
         
         <div class="absolute inset-0 bg-gradient-to-r from-brand/10 to-transparent opacity-50"></div>
